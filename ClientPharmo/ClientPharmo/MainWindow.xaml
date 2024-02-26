@@ -1,0 +1,27 @@
+﻿<Window x:Class="ClientPharmo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientPharmo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name="MedicineList" HorizontalAlignment="Left" Height="394" Margin="10,10,0,0" VerticalAlignment="Top" Width="764">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Medicine Code" DisplayMemberBinding="{Binding MedicineCode}" />
+                    <GridViewColumn Header="Medicine Name" DisplayMemberBinding="{Binding MedicineName}" />
+                    <GridViewColumn Header="Manufacturing Date" DisplayMemberBinding="{Binding ManufacturingDate}" />
+                    <GridViewColumn Header="Expiry Date" DisplayMemberBinding="{Binding ExpiryDate}" />
+                    <GridViewColumn Header="Number Of Packages" DisplayMemberBinding="{Binding NumberOfPackages}" />
+                    <GridViewColumn Header="Pharmacy Number" DisplayMemberBinding="{Binding PharmacyNumber}" />
+                    <GridViewColumn Header="Cost Of Medicine" DisplayMemberBinding="{Binding CostOfMedicine}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="DeleteButton" Content="Удалить" HorizontalAlignment="Left" Margin="10,409,0,0" VerticalAlignment="Top" Width="75" Click="DeleteButton_Click"/>
+        <Button Name="CheckExpiryButton" Content="Проверить сроки годности" HorizontalAlignment="Left" Margin="90,409,0,0" VerticalAlignment="Top" Width="164" Click="CheckExpiryButton_Click"/>
+    </Grid>
+</Window>
